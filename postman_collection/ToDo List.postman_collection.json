@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "f78fa196-407e-416d-b49b-5b00afe748b4",
+		"name": "ToDo List",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22357838"
+	},
+	"item": [
+		{
+			"name": "ToDoS",
+			"item": [
+				{
+					"name": "Create to do",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWwudG9kb2xpc3QucGsvYXBpL3VzZXIvbG9naW4iLCJpYXQiOjE3MDMyNDEyODYsImV4cCI6MTcwMzI0NDg4NiwibmJmIjoxNzAzMjQxMjg2LCJqdGkiOiJpSmZUM0xEc0ZITUpmSXJBIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.6vjYOUSfD6sUBt4pb4Qn-R0pJbDwFnvsq6g6uHKWLn0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "New To Do",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "user id 4 todo",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}api/user/create-to-do",
+							"host": [
+								"{{base_url}}api"
+							],
+							"path": [
+								"user",
+								"create-to-do"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View To Do",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWwudG9kb2xpc3QucGsvYXBpL3VzZXIvbG9naW4iLCJpYXQiOjE3MDMyMzc1MDAsImV4cCI6MTcwMzI0MTEwMCwibmJmIjoxNzAzMjM3NTAwLCJqdGkiOiI5WUdMclREd2I1SlAwT0lHIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.rkayNXaUlOxTPjjZcZXMBG0POxjZneez_cuAO94vTVg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "todo_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}api/user/view-to-do",
+							"host": [
+								"{{base_url}}api"
+							],
+							"path": [
+								"user",
+								"view-to-do"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update To Do",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWwudG9kb2xpc3QucGsvYXBpL3VzZXIvbG9naW4iLCJpYXQiOjE3MDMyNDEyODYsImV4cCI6MTcwMzI0NDg4NiwibmJmIjoxNzAzMjQxMjg2LCJqdGkiOiJpSmZUM0xEc0ZITUpmSXJBIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.6vjYOUSfD6sUBt4pb4Qn-R0pJbDwFnvsq6g6uHKWLn0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "todo_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "New Title",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "New added description11",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}api/user/update-to-do",
+							"host": [
+								"{{base_url}}api"
+							],
+							"path": [
+								"user",
+								"update-to-do"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete To do",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWwudG9kb2xpc3QucGsvYXBpL3VzZXIvbG9naW4iLCJpYXQiOjE3MDMyNDEyODYsImV4cCI6MTcwMzI0NDg4NiwibmJmIjoxNzAzMjQxMjg2LCJqdGkiOiJpSmZUM0xEc0ZITUpmSXJBIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.6vjYOUSfD6sUBt4pb4Qn-R0pJbDwFnvsq6g6uHKWLn0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "todo_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}api/user/delete-to-do",
+							"host": [
+								"{{base_url}}api"
+							],
+							"path": [
+								"user",
+								"delete-to-do"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWwudG9kb2xpc3QucGsvYXBpL3VzZXIvbG9naW4iLCJpYXQiOjE3MDMyNDI0MzEsImV4cCI6MTcwMzI0NjAzMSwibmJmIjoxNzAzMjQyNDMxLCJqdGkiOiI4UlBmRHZ6OElJQ0RkQlpZIiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jdtvutWJR6luf2NhycRt_-Gl7y47SB5d_HZMwv2-hIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{base_url}}api/user/list-to-do/4?searchTodo=search",
+							"host": [
+								"{{base_url}}api"
+							],
+							"path": [
+								"user",
+								"list-to-do",
+								"4"
+							],
+							"query": [
+								{
+									"key": "searchTodo",
+									"value": "search"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "hassan.cheema1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "makiali8899",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "makiali8899",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}api/user/register",
+					"host": [
+						"{{base_url}}api"
+					],
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "hassan.cheema1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "makiali8899",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}api/user/login",
+					"host": [
+						"{{base_url}}api"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refresh",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWwudG9kb2xpc3QucGsvYXBpL3VzZXIvcmVmcmVzaCIsImlhdCI6MTcwMzIzNjM0MSwiZXhwIjoxNzAzMjM5OTU1LCJuYmYiOjE3MDMyMzYzNTUsImp0aSI6InMyN1hlbzBhNEFsTm9YYVIiLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.ILk5K130M9WpNpI8PLFiXFqHRQv_-zh6cfoTveDoZXw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "hassan.cheema2202@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "makiali8899",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}api/user/refresh",
+					"host": [
+						"{{base_url}}api"
+					],
+					"path": [
+						"user",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWwudG9kb2xpc3QucGsvYXBpL3VzZXIvbG9naW4iLCJpYXQiOjE3MDMyMzY0NjYsImV4cCI6MTcwMzI0MDA2NiwibmJmIjoxNzAzMjM2NDY2LCJqdGkiOiI3THpHZEhpWjE4RzU0cjV0Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.fOQhzJdkb_eJJfOcrDetwhwtYPG6U5cmwqBr8aSfzlw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "hassan.cheema2202@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "makiali8899",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}api/user/logout",
+					"host": [
+						"{{base_url}}api"
+					],
+					"path": [
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
